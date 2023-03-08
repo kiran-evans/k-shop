@@ -40,7 +40,7 @@ router.route('/').post(
 router.route('/').get(async (req: Request, res: Response) => {
     try {
         if (req.query.all) {
-            const queryResult: QueryResult = await pool.query(`SELECT * FROM products`);
+            const queryResult: QueryResult = await pool.query(`SELECT * FROM products ORDER BY name ASC`);
             if (queryResult.rowCount === 0) return res.status(404).json(`No products.`);
             
             return res.status(200).json(queryResult.rows);

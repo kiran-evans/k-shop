@@ -9,11 +9,13 @@ module.exports = {
                 xl: "1.7rem"
             },
             minWidth: {
+                0.5: "15vw",
                 1: "25vw"
             },
             maxWidth: {
+                0.5: "15vw",
                 1: "25vw",
-                2: "30avw"
+                2: "30vw"
             }
         },
     },

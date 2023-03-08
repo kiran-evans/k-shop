@@ -28,12 +28,12 @@
         px-3
         py-1
         ">
-
-        <button on:click={() => drawerIsOpen = !drawerIsOpen}>Menu</button>
+        
+        <span class="material-symbols-outlined self-center cursor-pointer" on:click={() => drawerIsOpen = !drawerIsOpen} title="Menu">menu</span>
 
         <a href="/"><h1 class="font-bold text-lg">K-Shop</h1></a>
 
-        <a href="/about" class="self-center">About</a>
+        <span class="material-symbols-outlined self-center cursor-pointer" title="Your bag">shopping_bag</span>
 
     </header>
 
@@ -45,7 +45,6 @@
         py-2
         bg-gray-200
         overflow-y-${drawerIsOpen ? 'hidden' : 'auto'}
-        min-h-screen
         `}>
         <slot />
     </div>
@@ -59,7 +58,7 @@
         inset-0
         w-screen
         flex
-    " on:click={() => drawerIsOpen = false} on:keydown={() => drawerIsOpen = false}>
+    " on:click={() => drawerIsOpen = false}>
         <div class="
             flex-10
             h-screen
@@ -74,8 +73,11 @@
                 border-gray-300
                 px-2
                 py-1
+                flex
+                justify-center
+                align-center
             ">
-                My Account
+                <span class="material-symbols-outlined cursor-pointer" title="Your account">account_circle</span>
             </div>
         
             <nav class="

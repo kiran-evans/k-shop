@@ -29,3 +29,13 @@ html {
         font-size: 1vw;
     }
 }
+
+@layer base {
+    button {
+        @apply border-2;
+        @apply border-black;
+        @apply rounded;
+        @apply px-1.5;
+        @apply py-0.5;
+    }
+}
